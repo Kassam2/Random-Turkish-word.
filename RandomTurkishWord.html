@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Turkish word</title>
+
+    <style>
+h1{
+    color: rgb(134, 44, 44);
+    text-align: center;
+}
+button{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border-width: 1px;
+    font-size: 30px;
+    border-color: white;
+    
+}
+#Ansewr{
+
+    margin-left: 40%;
+}
+    
+    </style>
+</head>
+<body>
+
+    <h1 id="Generated"> The random word</h1>
+    <br></br>
+
+    <form action="usersTry">
+    <input type="text" name="" id="Ansewr"> 
+    <input type="submit" for="Ansewr" name="" id="">
+</form>
+    <br></br>
+
+
+    <button onclick="RandomWordGenerater()" id="generateButton">Generate</button>
+    
+    <script>
+
+        const usersTry = null;
+        function RandomWordGenerater()
+        {
+            const TurkishWords = ["Gel", "Git", "Neden"];
+
+            const randomIndex = Math.floor(Math.random() * TurkishWords.length);
+
+            const theTrukishWord = TurkishWords[randomIndex];
+
+            document.getElementById("Generated").textContent = theTrukishWord;
+            document.getElementById("generateButton").disabled = true;
+
+            
+        }
+
+
+    </script>
+</body>
+</html>
