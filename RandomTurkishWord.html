@@ -18,25 +18,37 @@ button{
     border-width: 1px;
     font-size: 30px;
     border-color: white;
-    margin-left: 45%;
-
+  
     
 }
 #Ansewr{
 
-    margin-left: 40%;
-}
     
+}
+
+div{
+    border: 5px;
+    border-color: blacks;
+    background-color: grey;
+    
+}
+
     </style>
 </head>
 <body>
-
+<div id="displayScreen">
     <h1 id="Generated"> The random word</h1>
     <br><br>
 
 <label for="answerInput">Write Your answer</label>
-<input type="text" name="" id="answerInput">    <button id="check" onclick="checkAanswer()"> Check answer</button>
-    <button onclick="RandomWordGenerater()" id="generateButton">Generate</button>
+<br><br>
+<input type="text" name="" id="answerInput"> <br>   
+<button id="check" onclick="checkAanswer()"> Check answer</button><br>
+ <button onclick="RandomWordGenerater()" id="generateButton">Generate</button><br>
+    
+</div>
+
+
     
     <script>
 
@@ -50,8 +62,8 @@ button{
             const theTrukishWord = TurkishWords[randomIndex];
 
             document.getElementById("Generated").textContent = theTrukishWord;
-            document.getElementById("generateButton").disabled = true;
-            document.getElementById("generateButton").disabled = true;
+         
+            
 
 
 
