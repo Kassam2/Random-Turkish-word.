@@ -1,60 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Turkish word</title>
 
     <style>
-h1{
-    color: rgb(134, 44, 44);
-    text-align: center;
-}
-button{
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
-    border-width: 1px;
-    font-size: 30px;
-    border-color: white;
-  
-    
-}
-#Ansewr{
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
 
-    
-}
-
-div{
-    border: 5px;
-    border-color: blacks;
-    background-color: grey;
-    
-}
-
+        div {
+            background-color: grey;
+        }
     </style>
 </head>
+
 <body>
-<div id="displayScreen">
-    <h1 id="Generated"> The random word</h1>
-    <br><br>
+    <div id="displayScreen">
+        <h1 id="Generated"> The random word</h1>
+        <br><br>
 
-<label for="answerInput">Write Your answer</label>
-<br><br>
-<input type="text" name="" id="answerInput"> <br>   
-<button id="check" onclick="checkAanswer()"> Check answer</button><br>
- <button onclick="RandomWordGenerater()" id="generateButton">Generate</button><br>
-    
-</div>
+        <label for="answerInput">Write Your answer</label>
+        <br><br>
+        <input type="text" name="" id="answerInput"> <br>
+        <button id="check" onclick="checkAanswer()"> Check answer</button><br>
+        <button onclick="RandomWordGenerater()" id="generateButton">Generate</button><br>
+
+    </div>
 
 
-    
+
     <script>
 
         const usersTry = null;
-        function RandomWordGenerater()
-        {
+        function RandomWordGenerater() {
             const TurkishWords = ["Gel", "Git", "Neden"];
 
             const randomIndex = Math.floor(Math.random() * TurkishWords.length);
@@ -62,22 +44,16 @@ div{
             const theTrukishWord = TurkishWords[randomIndex];
 
             document.getElementById("Generated").textContent = theTrukishWord;
-         
-            
 
 
 
-            
-        }
-
-        function checkAanswer ()
-        {
 
 
 
         }
 
-        
+
+
     </script>
 </body>
 
