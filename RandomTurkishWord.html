@@ -38,18 +38,21 @@
 
     <script>
 
-          let userTry;
-          let wordMeaning;
-          
-        
+        let userTry;
+        let wordMeaning;
+        let randomIndex;
+        let theTurkishWord;
+        let TurkishWords = ["Gel", "come", "Git", "go", "Neden", "why"];
+
+
         function RandomWordGenerater() {
-            const TurkishWords = ["Gel", "Git", "Neden"];
 
-            const randomIndex = Math.floor(Math.random() * TurkishWords.length);
 
-            const theTrukishWord = TurkishWords[randomIndex];
+            randomIndex = Math.floor(Math.random() * TurkishWords.length);
 
-            document.getElementById("Generated").textContent = theTrukishWord;
+            theTrukishWord = TurkishWords[randomIndex];
+
+            document.getElementById("theRandomWord").textContent = theTrukishWord;
 
 
 
@@ -57,9 +60,18 @@
 
 
         }
-        function checkAanswer()
-        {
-            console.log (document.getElementById("answerInput").value)
+        function checkAanswer() {
+
+            console.log(document.getElementById("answerInput").value)
+            wordMeaning = TurkishWords[randomIndex + 1]
+            
+            if (wordMeaning === document.getElementById("answerInput").value) {
+                console.log("Correct!");
+
+            }
+            else {
+                console.log("false");
+            }
         }
 
 
