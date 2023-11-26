@@ -23,6 +23,8 @@
         <h1> The random word</h1>
         <h1 id="theRandomWord"></h1>
         <br>
+        <h2 id="coreectOrNot"></h2>
+        <br>
         <label for="answerInput">Write Your answer</label>
         <br>
         <input type="text" name="" id="answerInput">
@@ -42,7 +44,44 @@
         let wordMeaning;
         let randomIndex;
         let theTurkishWord;
-        let TurkishWords = ["Gel", "come", "Git", "go", "Neden", "why"];
+
+        const TurkishWords = [
+            { word: "merhaba", meaning: "hello" },
+            { word: "kitap", meaning: "book" },
+            { word: "ev", meaning: "house" },
+            { word: "güneş", meaning: "sun" },
+            { word: "masa", meaning: "table" },
+            { word: "kedi", meaning: "cat" },
+            { word: "köpek", meaning: "dog" },
+            { word: "bilgisayar", meaning: "computer" },
+            { word: "telefon", meaning: "phone" },
+            { word: "kalem", meaning: "pen" },
+            { word: "okul", meaning: "school" },
+            { word: "araba", meaning: "car" },
+            { word: "yemek", meaning: "food" },
+            { word: "su", meaning: "water" },
+            { word: "kahve", meaning: "coffee" },
+            { word: "film", meaning: "movie" },
+            { word: "müzik", meaning: "music" },
+            { word: "spor", meaning: "sport" },
+            { word: "kitaplık", meaning: "bookshelf" },
+            { word: "film izlemek", meaning: "to watch a movie" },
+            { word: "öğrenci", meaning: "student" },
+            { word: "öğretmen", meaning: "teacher" },
+            { word: "hava", meaning: "weather" },
+            { word: "saat", meaning: "clock" },
+            { word: "renk", meaning: "color" },
+            { word: "gözlük", meaning: "glasses" },
+            { word: "kağıt", meaning: "paper" },
+            { word: "radyo", meaning: "radio" },
+            { word: "gül", meaning: "rose" },
+            { word: "çanta", meaning: "bag" },
+            { word: "yıldız", meaning: "star" },
+            { word: "gece", meaning: "night" },
+            { word: "gün", meaning: "day" },
+            // Add more words as needed
+        ];
+
 
 
         function RandomWordGenerater() {
@@ -50,9 +89,10 @@
 
             randomIndex = Math.floor(Math.random() * TurkishWords.length);
 
-            theTrukishWord = TurkishWords[randomIndex];
+            theTrukishWord = TurkishWords[randomIndex].word;
 
             document.getElementById("theRandomWord").textContent = theTrukishWord;
+            document.getElementById("coreectOrNot").textContent = "";
 
 
 
@@ -62,15 +102,15 @@
         }
         function checkAanswer() {
 
-            console.log(document.getElementById("answerInput").value)
-            wordMeaning = TurkishWords[randomIndex + 1]
-            
-            if (wordMeaning === document.getElementById("answerInput").value) {
-                console.log("Correct!");
+            wordMeaning = TurkishWords[randomIndex].meaning;
+            userTry = document.getElementById("answerInput").value.toLowerCase().replace(/\s/g, '');
+
+            if (wordMeaning === userTry) {
+                document.getElementById("coreectOrNot").textContent = "Coreect!";
 
             }
             else {
-                console.log("false");
+                document.getElementById("coreectOrNot").textContent = "False";
             }
         }
 
