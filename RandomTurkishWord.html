@@ -18,6 +18,8 @@ button{
     border-width: 1px;
     font-size: 30px;
     border-color: white;
+    margin-left: 45%;
+
     
 }
 #Ansewr{
@@ -30,15 +32,10 @@ button{
 <body>
 
     <h1 id="Generated"> The random word</h1>
-    <br></br>
+    <br><br>
 
-    <form action="usersTry">
-    <input type="text" name="" id="Ansewr"> 
-    <input type="submit" for="Ansewr" name="" id="">
-</form>
-    <br></br>
-
-
+<label for="answerInput">Write Your answer</label>
+<input type="text" name="" id="answerInput">    <button id="check" onclick="checkAanswer()"> Check answer</button>
     <button onclick="RandomWordGenerater()" id="generateButton">Generate</button>
     
     <script>
@@ -54,8 +51,18 @@ button{
 
             document.getElementById("Generated").textContent = theTrukishWord;
             document.getElementById("generateButton").disabled = true;
+            document.getElementById("generateButton").disabled = true;
+
+
 
             
+        }
+
+        function checkAanswer ()
+        {
+
+
+
         }
 
         
@@ -63,5 +70,5 @@ button{
 </body>
 
 
-Hello
+
 </html>
