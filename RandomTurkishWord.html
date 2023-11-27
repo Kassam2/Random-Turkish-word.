@@ -23,6 +23,8 @@
             width: 50%;
             border: 1px solid black;
             padding: 10px;
+            max-width: 300px;
+
         }
 
         #userInputScreen {
@@ -30,14 +32,24 @@
             width: 50%;
             border: 1px solid black;
             padding: 10px;
+            display: flex;
+            max-width: 300px;
+            min-width: 250px;
         }
         #generateButton, #check{
             background-color: white;
             border-radius: 4px;
             font-size: 30px;
             color: black;
+            margin: auto;
+            display: flex;
+            max-width: 300px;
+            min-width: 250px;
 
 
+        }
+        #theRandomWord{
+            color:rgb(255, 131, 131);
         }
     </style>
 </head>
@@ -140,7 +152,7 @@
 
             }
             else {
-                document.getElementById("coreectOrNot").textContent = "False";
+                document.getElementById("coreectOrNot").textContent = "False " + "The answer is: "+wordMeaning;
             }
         }
 
